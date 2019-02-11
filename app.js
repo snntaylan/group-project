@@ -61,12 +61,12 @@ hbs.registerHelper('ifUndefined', (value, options) => {
   
 
 // default value for title local
-app.locals.title = 'Express - Generated with IronGenerator';
+app.locals.title = 'Group Project';
 
 
 // Enable authentication using session + passport
 app.use(session({
-  secret: 'irongenerator',
+  secret: process.env.SECRET,
   resave: true,
   saveUninitialized: true,
   store: new MongoStore( { mongooseConnection: mongoose.connection })
